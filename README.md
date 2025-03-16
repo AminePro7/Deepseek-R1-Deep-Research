@@ -10,7 +10,7 @@
 
 This project integrates Deepseek-R1 with browser-use web-ui to enable AI-powered deep research capabilities. It allows AI agents to browse the web, conduct research, and perform complex tasks with persistent browser sessions and high-definition screen recording.
 
-![Agent History](web-ui/agent_history.gif)
+![Agent History](assets/agent_history.gif)
 
 ## ✨ Features
 
@@ -59,7 +59,7 @@ source .venv/bin/activate
 #### Step 3: Install Dependencies
 Install Python packages:
 ```bash
-uv pip install -r web-ui/requirements.txt
+uv pip install -r requirements.txt
 ```
 
 Install Playwright:
@@ -70,9 +70,9 @@ playwright install
 #### Step 4: Configure Environment
 1. Create a copy of the example environment file:
 ```bash
-cp web-ui/.env.example web-ui/.env
+cp .env.example .env
 ```
-2. Open `web-ui/.env` in your preferred text editor and add your API keys and other settings
+2. Open `.env` in your preferred text editor and add your API keys and other settings
 
 ### Option 2: Docker Installation
 
@@ -88,13 +88,12 @@ cd Deepseek-R1-Deep-Research
 
 2. Create and configure environment file:
 ```bash
-cp web-ui/.env.example web-ui/.env
+cp .env.example .env
 ```
 
 3. Run with Docker:
 ```bash
 # Build and start the container with default settings
-cd web-ui
 docker compose up --build
 ```
 
@@ -113,7 +112,6 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
 ### Local Setup
 1. Run the WebUI:
 ```bash
-cd web-ui
 python webui.py --ip 127.0.0.1 --port 7788
 ```
 
